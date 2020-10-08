@@ -3,7 +3,7 @@ services:
     - docker 
 
 before_install:
-    - docker build -t shashank/docker-react .
+    - docker build -t shashank/docker-react ./app
 
 script: 
     - docker run -e CI=true shashank/docker-react npm run test 

@@ -6,4 +6,4 @@ before_install:
     - docker build -t shashank/docker-react ./client
 
 script: 
-    - docker run shashank/docker-react npm run test -- --coverage
+    - docker run -e CI=true shashank/docker-react npm run test 
